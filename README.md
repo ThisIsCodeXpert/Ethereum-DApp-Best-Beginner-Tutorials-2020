@@ -10,6 +10,6 @@ Best Ethereum Decentralized Applications Tutorial Series Available!
 
 -----
 _(Checkout Tags to get tutorial specific code)_
-### Template Code
+### Tutorial-2
 
 This code is to be used as a template of tutorial series.
