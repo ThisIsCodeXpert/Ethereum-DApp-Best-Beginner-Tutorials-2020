@@ -1,5 +1,5 @@
 # Ethereum-DApp-Best-Beginner-Tutorials-2020
-[![License: MIT](https://img.shields.io/npm/l/express)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/npm/l/express?color=orange)](https://opensource.org/licenses/MIT)
 [![NPM Version](https://img.shields.io/node/v/express?color=blue)]()
 [![Discord](https://img.shields.io/discord/475163926187999242?logo=discord)](https://discord.gg/t36kuCt)
 [![YouTube](https://img.shields.io/youtube/views/1z5M12tcSdQ?style=social)](https://www.youtube.com/c/CodeXpert)
@@ -9,4 +9,4 @@
 ### Tutorial-1
 Best Ethereum Decentralized Applications Tutorial Series Available!
 
-(Checkout Tags to get tutorial specific code)
+_(Checkout Tags to get tutorial specific code)_
