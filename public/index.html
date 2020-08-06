@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>CodeXpert Voting DApp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</head>
+
+<body class="text-secondary font-weight-light">
+	<nav class="navbar navbar-dark bg-dark">
+	    <a class="navbar-brand" href="#">
+            CodeXpert Voting DApp
+	    </a>
+		<span class="navbar-brand mb-0"></span>
+	</nav>
+
+    <div class="container mt-5">
+    	<center>
+	    	<div class="col-md-5">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Candidates</th>
+                      <th scope="col" id="cad1">Candidate 1</th>
+                      <th scope="col" id="cad2">Candidate 2</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Votes</th>
+                      <td id="cad1count">0</td>
+                      <td id="cad2count">0</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"></th>
+                      <td id="cad1count"><button onclick="Vote(1)" class="btn btn-primary">Vote</button></td>
+                      <td id="cad2count"><button onclick="Vote(2)" class="btn btn-primary">Vote</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+	    	</div>
+	    	</br>
+
+            <p class="small mt-5">Developed with  <i class="fas fa-heart mr-1 text-danger"></i>by <a href="https://www.youtube.com/c/CodeXpert" class="font-weight-bold text-danger" target="_blank"> CodeXpert</a></p>
+    	</center>
+        <hr>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+    <script src="js/contract.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <script>
+        async function CheckMetamaskConnection() {
+            // Modern dapp browsers...
+            if (window.ethereum) {
+                window.web3 = new Web3(window.ethereum);
+                try {
+                    // Request account access if needed
+                    await ethereum.enable();
+                    // Acccounts now exposed
+                    return true;
+                } catch (error) {
+                    // User denied account access...
+                    return false;
+                }
+            }
+            // Legacy dapp browsers...
+            else if (window.web3) {
+                window.web3 = new Web3(web3.currentProvider);
+                // Acccounts always exposed
+
+                return true;
+            }
+            // Non-dapp browsers...
+            else {
+                console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+                return false;
+            }
+        }
+
+        $(document).ready(async function () {
+            var IsMetamask = await CheckMetamaskConnection();
+            if (IsMetamask) {
+                console.log("Metamask detected!")
+            } else {
+                console.log("Metamask not detected");
+                Swal.fire({
+				  icon: 'error',
+				  title: 'Oops...',
+				  text: 'Metamask not detected!',
+				  onClose() {
+				  	location.reload();
+				  }
+				});
+            }
+        });
+
+    </script>
+</body>
+</html>

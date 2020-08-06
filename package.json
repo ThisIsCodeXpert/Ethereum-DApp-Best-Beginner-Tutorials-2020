@@ -1,0 +1,22 @@
+{
+  "name": "voting-dapp",
+  "version": "1.0.0",
+  "description": "my first dapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThisIsCodeXpert/Ethereum-DApp-Best-Beginner-Tutorials-2020.git"
+  },
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "author": "CodeXpert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThisIsCodeXpert/Ethereum-DApp-Best-Beginner-Tutorials-2020/issues"
+  },
+  "homepage": "https://github.com/ThisIsCodeXpert/Ethereum-DApp-Best-Beginner-Tutorials-2020#readme"
+}

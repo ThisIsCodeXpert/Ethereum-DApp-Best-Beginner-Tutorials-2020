@@ -6,7 +6,10 @@
 [![Github Follow](https://img.shields.io/github/followers/ThisIsCodeXpert?style=social)]()
 [![Github Fork](https://img.shields.io/github/forks/ThisIsCodeXpert/Ethereum-DApp-Best-Beginner-Tutorials-2020?style=social)]()
 
-### Tutorial-1
 Best Ethereum Decentralized Applications Tutorial Series Available!
 
+-----
 _(Checkout Tags to get tutorial specific code)_
+### Template Code
+
+This code is to be used as a template of tutorial series.
