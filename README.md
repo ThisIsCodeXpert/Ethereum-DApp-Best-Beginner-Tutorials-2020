@@ -10,4 +10,4 @@ Best Ethereum Decentralized Applications Tutorial Series Available!
 
 -----
 _(Checkout Tags to get tutorial specific code)_
-### Tutorial-4 | Reading Smart Contract in Front End
+### Tutorial-4 | Writing Smart Contract From Front End
