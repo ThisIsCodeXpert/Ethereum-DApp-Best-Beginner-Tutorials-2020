@@ -126,6 +126,16 @@
             });
         }
 
+        async function Vote(cad){
+            await myContract.vote(cad, function(err, result){
+                if(!err){
+                    console.log("We are winning!");
+                } else{
+                    console.log("Can not connect to the smart contract");
+                }
+            })
+        }
+
     </script>
 </body>
 </html>
