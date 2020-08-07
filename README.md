@@ -10,7 +10,6 @@ Best Ethereum Decentralized Applications Tutorial Series Available!
 
 -----
 _(Checkout Tags to get tutorial specific code)_
-### Tutorial-6 | Working With Events
 
 #### Requirements
 - Ethereum enabled browser or Metamask installed (https://metamask.io/)
