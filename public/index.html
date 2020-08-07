@@ -101,6 +101,13 @@
                 myContract = await web3.eth.contract(SmartContractABI).at(SmartContractAddress);
                 getCandidate(1);
                 getCandidate(2);
+
+                await myContract.eventVote({
+                    fromBlock:0
+                }, function(err, event){
+                    console.log("event :", event);
+                    getCandidate(event.args._candidateid.toNumber());
+                });
                 console.log("myContract :", myContract);
                 console.log("Metamask detected!")
             } else {
