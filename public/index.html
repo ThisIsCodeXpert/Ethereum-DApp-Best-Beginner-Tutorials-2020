@@ -66,6 +66,7 @@
         crossorigin="anonymous"></script>
 
     <script>
+        var myContract;
         async function CheckMetamaskConnection() {
             // Modern dapp browsers...
             if (window.ethereum) {
@@ -97,6 +98,10 @@
         $(document).ready(async function () {
             var IsMetamask = await CheckMetamaskConnection();
             if (IsMetamask) {
+                myContract = await web3.eth.contract(SmartContractABI).at(SmartContractAddress);
+                getCandidate(1);
+                getCandidate(2);
+                console.log("myContract :", myContract);
                 console.log("Metamask detected!")
             } else {
                 console.log("Metamask not detected");
@@ -110,6 +115,16 @@
 				});
             }
         });
+
+        async function getCandidate(cad){
+            await myContract.candidates(cad, function(err, result){
+                if (!err) {
+                    console.log("result : ", result);
+                    document.getElementById("cad" + cad).innerHTML = result[1];
+                    document.getElementById("cad"+cad+'count').innerHTML = result[2].toNumber();
+                }
+            });
+        }
 
     </script>
 </body>
